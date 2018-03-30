@@ -2056,12 +2056,12 @@ motor.right.target = event.args[0] \
             ["r", "isometria %m.odo", "odo", "direzione"],*/
         ],
         ja: [
-            ["w", "%n 歩動かす", "scratch_move", 50],
-            ["w", "%n 歩を %n のスピードで動かす", "scratch_move_with_speed", 50, 50],
-            ["w", "move %n in %n s", "scratch_move_with_time", 50, 1],
-            ["w", "turn %n", "scratch_turn", 45],
-            ["w", "turn %n with speed %n", "scratch_turn_with_speed", 90,50],
-            ["w", "turn %n in %n s", "scratch_turn_with_time", 90,1],
+            ["w", "%n 歩移動する", "scratch_move", 50],
+            ["w", "%n 歩を %n のスピードで移動する", "scratch_move_with_speed", 50, 50],
+            ["w", "%n 歩を %n 秒で移動する", "scratch_move_with_time", 50, 1],
+            ["w", "%n 度曲がる", "scratch_turn", 45],
+            ["w", "%n 度を %n のスピードで曲がる", "scratch_turn_with_speed", 90,50],
+            ["w", "%n 度を %n 秒で曲がる", "scratch_turn_with_time", 90,1],
             ["w", "circle radius %n angle %n", "scratch_arc", 150, 45],
             [" ", "stop motors", "scratch_stop"],
             [" ", "leds set color %n on %m.light", "scratch_set_leds", 0, "all"],
