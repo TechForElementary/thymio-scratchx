@@ -2147,7 +2147,7 @@ motor.right.target = event.args[0] \
             odo: ["direzione", "x", "y"],
             tilts: ["davanti-dietro", "sopra-sotto", "sinistro-destro"],
             buttons: ["centrale","davanti","dietro","sinistra","destra"]
-
+/*
         },
         ja: {
             leftrightall: ["左", "右", "全て"],
@@ -2161,7 +2161,7 @@ motor.right.target = event.args[0] \
             odo: ["向き", "x", "y"],
             tilts: ["前後", "上下", "左右"],
             buttons: ["中央","前進","後退","左","右"]
-
+*/
 
         }
 
