@@ -2049,7 +2049,60 @@ motor.right.target = event.args[0] \
             ["r", "moteur %m.leftright vitesse", "motor_speed", "gauche" ],
             ["r", "moteur %m.leftright target", "motor_target", "gauche" ],
             */
+        ],       
+        ja: [
+            [" ", "%m.leftrightall のモーターを速度 %n に設定", "scratch_motor", "左", 50],
+            [" ", "モーターを止める", "scratch_stop"],
+            ["w", "%n 歩移動する", "scratch_move", 50],
+            ["w", "%n mmを %n mm/秒の速さで動かす", "scratch_move_with_speed", 50, 50],
+            ["w", "%n mmを %n 秒で動かす", "scratch_move_with_time", 50, 1],
+            ["w", "%n 度回す", "scratch_turn", 45],
+            ["w", "%n 度を %n mm/秒の速さで回す", "scratch_turn_with_speed", 90,50],
+            ["w", "%n 度を %n 秒で回す", "scratch_turn_with_time", 90,1],
+            ["w", "半径 %n mmで %n 度回す", "scratch_arc", 150, 45],
+            [" ", "%m.light のLEDの色を設定 R: %n G: %n B: %n", "scratch_leds", "すべて", 0, 0, 32],
+            [" ", "%n の色に設定 %m.light のLED", "scratch_set_leds", 0, "すべて"],
+            [" ", "%n の色に変更 %m.light のLED", "scratch_change_leds", 0, "すべて"],
+            [" ", "LEDを %m.leftright にダイアル", "scratch_next_dial", "左"],
+            [" ", "LEDを %n %n %n %n %n %n %n %n に設定", "V_leds_circle", 0, 8, 16, 32, 0, 8, 16, 32],
+            [" ", "水平センサーのLEDを %n %n %n %n %n %n %n %n に設定", "V_leds_prox_h", 0, 16, 32, 32, 16, 0, 32, 32],
+            [" ", "垂直センサーのLEDを %n %n に設定", "V_leds_prox_v", 32, 32],
+            [" ", "ボタンのLEDを %n %n %n %n に設定", "V_leds_buttons", 16, 32, 16, 32],
+            [" ", "温度表示のLEDを %n %n に設定", "V_leds_temperature", 32, 8],
+            [" ", "リモコンのLEDを %n に設定", "V_leds_rc", 16],
+            [" ", "マイクのLEDを %n に設定", "V_leds_sound", 32],
+            [" ", "LEDを消す", "scratch_clear_leds"],
+            [" ", "システムサウンド %m.sounds の音を鳴らす", "A_sound_system", 1],
+            [" ", "%n の音符を %n 秒間鳴らす", "A_sound_freq", 440, 1],
+            [" ", "SDカードのp %n の音を鳴らす", "A_sound_play_sd", ""],
+            [" ", "SDカードのr %n の音を録音", "A_sound_record", ""],
+            [" ", "SDカードのr %n の音を鳴らす", "A_sound_replay", ""],
+            ["r", "近接センサー %n", "proximity", 2],
+            ["r", "近接センサー %m.proxsensors", "proximity2", "前方左端"],
+            ["r", "全ての近接センサー", "prox_horizontal"],
+            ["r", "グラウンドセンサー %n", "ground", 0],
+            ["r", "全てのグラウンドセンサー", "prox_ground_delta"],
+            ["r", "%m.sensors の距離", "distance", "前方"],
+            ["r", "%m.angles の角度", "angle", "前方"],
+            ["b", "%m.sensors に障害物を検出した", "touching", "前方"],
+            ["b", "%m.sensors に %n の障害物を検出した", "touching_threshold", "前方"],
+            ["r", "音量", "mic_intensity"],
+            ["b", "音が聞こえた", "sound_detected"],
+            ["b", "%n をタップした", "bump"],
+            ["r", "%m.tilts に傾ける", "tilt", "前後"],
+            ["R", "温度", "temperature"],
+            ["r", "%m.leftright のモーターの速度", "motor", "左"],
+            ["r", "%m.light のLEDの色", "leds", "上"],    
+            [" ", "走行距離計を設定 %n 度 x: %n mm y: %n mm", "Q_set_odometer", 90, 0, 0],
+            ["r", "走行距離計 %m.odo", "odo", "向き"],
+            [" ", "近接センサーから %n を送る", "emit", 1],
+            ["r", "近接センサーで受け取った値", "receive"],
+            ["h", "%m.buttons ボタンが押されたとき", "button","中央"]
             
+           /* 
+            ["r", "motor %m.leftright speed", "motor_speed", "left" ],
+            ["r", "motor %m.leftright target", "motor_target", "left" ],
+            */
         ]
     };
 
@@ -2094,6 +2147,21 @@ motor.right.target = event.args[0] \
             odo: ["direzione", "x", "y"],
             tilts: ["davanti-dietro", "sopra-sotto", "sinistro-destro"],
             buttons: ["centrale","davanti","dietro","sinistra","destra"]
+
+        },
+        ja: {
+            leftrightall: ["左", "右", "全て"],
+            leftright: ["左", "右"],
+            sensors: ["前方", "後方", "グラウンド"],
+            proxsensors: ["前方左端", "前方左中", "前方中央", "前方右中", "前方右端", "後方左", "後方右"],
+            singlelight: ["上", "左下", "右下"],
+            light: ["すべて", "上", "下", "左下", "右下"],
+            angles: ["前方", "後方", "グラウンド"],
+            sounds: ["0", "1", "2", "3", "4", "5", "6", "7"],
+            odo: ["向き", "x", "y"],
+            tilts: ["前後", "上下", "左右"],
+            buttons: ["中央","前進","後退","左","右"]
+
 
         }
 
