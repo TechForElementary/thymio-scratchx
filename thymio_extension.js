@@ -2053,7 +2053,7 @@ motor.right.target = event.args[0] \
         ja: [
             [" ", "%m.leftrightall のモーターを速度 %n に設定", "scratch_motor", "左", 50],
             [" ", "モーターを止める", "scratch_stop"],
-            ["w", "%n 歩移動する", "scratch_move", 50],
+            ["w", "%n mm移動する", "scratch_move", 50],
             ["w", "%n mmを %n mm/秒の速さで動かす", "scratch_move_with_speed", 50, 50],
             ["w", "%n mmを %n 秒で動かす", "scratch_move_with_time", 50, 1],
             ["w", "%n 度回す", "scratch_turn", 45],
@@ -2089,7 +2089,7 @@ motor.right.target = event.args[0] \
             ["r", "音量", "mic_intensity"],
             ["b", "音が聞こえた", "sound_detected"],
             ["b", "%n をタップした", "bump"],
-            ["r", "%m.tilts に傾ける", "tilt", "前後"],
+            ["r", "%m.tilts の傾き", "tilt", "前後"],
             ["R", "温度", "temperature"],
             ["r", "%m.leftright のモーターの速度", "motor", "左"],
             ["r", "%m.light のLEDの色", "leds", "上"],    
