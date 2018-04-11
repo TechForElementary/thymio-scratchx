@@ -4,5 +4,5 @@ For instructions about how to install and use ScratchX with Thymio please refer 
 
 If you found a bug with the ScratchX extension for Thymio, please look at the <a href="https://github.com/aseba-community/thymio-scratchx/issues">existing issues</a> to see if your problem has already been reported. If not, please <a href="https://github.com/aseba-community/thymio-scratchx/issues/new">open a new issue</a>.
 
-
+これは、Mobsyaが開発したThymio用のScratchXを、子ども向けプログラミング教室FC『Tech for elementary』が日本語化したものです。
 
